@@ -16,6 +16,7 @@
     --text-color: #161616;
     --bg-color: #fff;
     --hover-color: hsl(0, 0%, 14%);
+    --title-color: #3E3D3D
 }
 
 img{
@@ -86,7 +87,44 @@ header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    column-gap: 3.5rem;
+    column-gap: 2rem;
+}
+
+.about_content{
+    min-height: 740px;
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    column-gap: 3.0rem;
+}
+
+.about-img{
+    width: 500px;
+    margin-right: 32px;
+}
+
+.about-text h1{
+    margin-bottom: 3rem;
+    font-size: 3.4rem;
+    color: var(--title-color);
+}
+
+.about-text{
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+
+.container-paragraph{
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.first-paragraph{
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .home-img{
@@ -97,11 +135,11 @@ header{
 .home-text h1{
     margin-bottom: 1rem;
     font-size: 3.4rem;
+    color: var(--title-color);
 }
 
 .home-text p {
     margin-bottom: 1rem;
-
 }
 
 .btn{
@@ -215,4 +253,5 @@ body{
     background: #a00202;
     
 }
+
 
