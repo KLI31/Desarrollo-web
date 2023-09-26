@@ -50,8 +50,20 @@ header{
     z-index: 100;
 }
 
+.logo-text{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
 .logo img{
     width: 41px;
+    margin-right: 10px;
 }
 
 .nav{
@@ -93,39 +105,33 @@ header{
 .about_content{
     min-height: 740px;
     display: grid;
-    flex-direction: row;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: center;
-    column-gap: 3.0rem;
+    column-gap: 2.5rem;
 }
 
 .about-img{
-    width: 500px;
-    margin-right: 32px;
+    width: 450px;
+    margin-left: 32px;
 }
 
 .about-text h1{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-size: 3.4rem;
     color: var(--title-color);
 }
 
-.about-text{
+.about-text p{
     margin-bottom: 1rem;
     margin-right: 1rem;
 }
 
 
 .container-paragraph{
-    flex-wrap: wrap;
-    width: 100%;
+    width: 120%;
+    padding-right: 40px;
 }
 
-.first-paragraph{
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-}
 
 .home-img{
     width: 500px;
@@ -161,14 +167,14 @@ header{
 }
 
 
-body{
+/* body{
     margin: 0;
     padding: 0;
     background : #ffffff;
     background-size: cover;
     height: 100vh; 
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
+} */
 
 .Login{
     width: 320px;
