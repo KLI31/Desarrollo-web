@@ -261,3 +261,50 @@ header{
 }
 
 
+.specs-container{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+
+.specs-details h2{
+    margin-bottom: 1rem;
+    font-size: 3.4rem;
+    color: var(--title-color);
+}
+
+.specs-details{
+display: grid;
+row-gap: 1.4rem;
+}
+
+.specs-details .box .bx{ 
+    font-size: 1.6rem;
+}
+
+.specs-details .box h3{
+font-size: 1rem; 
+}
+
+
+.specs-details p{
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+
+
+
+.specs-img{
+    width: 600px;
+    margin-left: 2px;
+    margin-top: 150px;
+}
+
+
+
+
+
+
+

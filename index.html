@@ -1,80 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <title>Trabajo desarrollo web</title>
-  </head>
-  <body>
-    <div class="main">
-      <header>
-        <div class="nav container">
-          <a href="#" class="logo">
-            <img src="./img/logo.png" alt="logoHeadsets" />
-            <span class="logo-text">Studio</span>
-          </a>
-          <i class="bx bx-menu" id="menu-icon"></i>
-          <ul class="navbar">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Buds</a></li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Trabajo desarrollo web</title>
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <div class="nav container">
+        <a href="#" class="logo">
+          <img src="./img/logo.png" alt="logoHeadsets" />
+          <span class="logo-text">Studio</span>
+        </a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <ul class="navbar">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Tienda</a></li>
+          <li><a href="#">Buds</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-content container">
+        <div class="home-img">
+          <img src="img/home.png" alt="audifonos bacanos" />
         </div>
-      </header>
 
-      <section class="home" id="home">
-        <div class="home-content container">
-          <div class="home-img">
-            <img src="img/home.png" alt="audifonos bacanos" />
-          </div>
+        <div class="home-text">
+          <h1>Beats Solo 3</h1>
+          <p>
+            Beast solo3 wireless over-hear headphones delivers premium sound
+            with blocking external noise with active noise cancelling
+          </p>
+          <a href="#" class="btn">
+            <i class="bx bx-shopping-bag"></i>
+            Buy Now</a>
+        </div>
+      </div>
+    </section>
 
-          <div class="home-text">
-            <h1>Beats Solo 3</h1>
+    <section class="about" id="about">
+      <div class="about_content container">
+        <div class="about-text">
+          <h1>Sobre nosotros</h1>
+
+          <div class="container-paragraph">
             <p>
-              Beast solo3 wireless over-hear headphones delivers premium sound
-              with blocking external noise with active noise cancelling
+              En Studio3, amamos la música tanto como tú. Nos apasiona
+              ofrecerte la mejor calidad de sonido y la libertad de la
+              tecnología inalámbrica. Nuestros audífonos Studio3 son el
+              resultado de esa pasión: diseño elegante, sonido excepcional y
+              comodidad sin igual. Experimenta la música como nunca antes.
+              ¡Bienvenido a Studio3!
             </p>
-            <a href="#" class="btn">
-              <i class="bx bx-shopping-bag"></i>
-              Buy Now</a
-            >
           </div>
         </div>
-      </section>
+        <div class="about-img">
+          <img src="img/about.png" alt="audifonos bacanos" />
+        </div>
+      </div>
+    </section>
 
-      <section class="about" id="about">
-        <div class="about_content container">
-          <div class="about-text">
-            <h1>Sobre nosotros</h1>
 
-            <div class="container-paragraph">
-              <p>
-                En Studio3, amamos la música tanto como tú. Nos apasiona
-                ofrecerte la mejor calidad de sonido y la libertad de la
-                tecnología inalámbrica. Nuestros audífonos Studio3 son el
-                resultado de esa pasión: diseño elegante, sonido excepcional y
-                comodidad sin igual. Experimenta la música como nunca antes.
-                ¡Bienvenido a Studio3!
-              </p>
-            </div>
+
+    <section class="specs" id="specs">
+      <div class="specs-container container">
+        <div class="specs-details">
+          <h2 class="about-text"> Espicificaciones</h2>
+          <div class="box">
+            <i class='bx bx-headphone'></i>
+            <h3> Bloqueo de ruido exterior</h3><br>
+            <p>Estos auriculares ofrecen un excepcional bloqueo de ruido exterior, permitiéndote sumergirte
+              completamente
+              en
+              tu música o llamadas sin distracciones. Disfruta de una experiencia auditiva inmersiva en cualquier
+              entorno.</p>
           </div>
-          <div class="about-img">
-            <img src="img/about.png" alt="audifonos bacanos" />
+          <div class="box">
+            <i class='bx bxs-battery-charging'></i>
+            <h3> <strong>22 horas continuas para escuchar tu musica</h3></strong><br>
+            <p>Con una impresionante duración de batería de hasta 22 horas continuas, estos auriculares te brindan la
+              libertad de disfrutar de tu música durante todo el día sin necesidad de recargas constantes.
+            </p>
           </div>
         </div>
-      </section>
-    </div>
-  </body>
-  <script src="script.js"></script>
+        <div class="specs-img">
+          <img src="img/specs.png" alt="audifonos bacanos" />
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+
+  
+</body>
+<script src="script.js"></script>
+
 </html>
