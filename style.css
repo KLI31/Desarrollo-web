@@ -88,6 +88,11 @@ header{
     font-size: 1rem;
     font-weight: 500;
     color: #6b6b6b;
+    
+    -webkit-background-clip: var(--text-color);
+    background-clip: var(--text-color);
+
+
 }
 
 .navbar a:hover{
@@ -301,6 +306,64 @@ font-size: 1rem;
     margin-left: 2px;
     margin-top: 150px;
 }
+
+.footer{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+    gap: 8rem;
+}
+
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h2{
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 1rem;
+}
+
+.footer-box a{
+color: #6b6b6b;
+margin-bottom: 4px; 
+font-size: 0.9rem;
+}
+
+
+
+.social {
+display: flex;
+column-gap: 0.9rem;
+}
+
+.social .bx{
+background: var(--text-color);
+color: var(--bg-color);
+padding: 8px;
+border-radius: 0.5rem;
+font-size: 1rem;
+}
+
+.social .bx:hover{
+background: var(--hover-color);
+
+}
+
+.copyright{
+    text-align: center;
+    padding: 20px;
+    color: #6b6b6b;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
 
 
 
