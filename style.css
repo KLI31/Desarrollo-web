@@ -88,11 +88,6 @@ header{
     font-size: 1rem;
     font-weight: 500;
     color: #6b6b6b;
-    
-    -webkit-background-clip: var(--text-color);
-    background-clip: var(--text-color);
-
-
 }
 
 .navbar a:hover{
