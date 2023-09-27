@@ -4,5 +4,4 @@
 
 - Luis David Rambao
 - Jose Raul Monroy
-- Carolina Petro
 
