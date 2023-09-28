@@ -494,8 +494,8 @@ font-size: 1rem;
 }
 
 
-.buds-text .btn {
-    background: hsl(0, 0%, 10%);
+.buds-text .btn:hover{
+    background-color: #f12020;
 }
 
 
