@@ -550,6 +550,64 @@ background: var(--hover-color);
     font-size: 0.8rem;
 }
 
+#cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#cart-icon:hover {
+    color: #161616; /* Color al pasar el ratón por encima */
+}
+
+.carrito {
+    display: none;
+    position: fixed; /* Cambiado de absolute a fixed */
+    right: 20px;
+    top: 60px; /* Ajusta esto según la altura de tu barra de navegación */
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.carrito h2 {
+    margin-top: 0;
+    color: #333; /* Color de texto más oscuro para mejor legibilidad */
+    font-size: 1.4rem;
+    margin-bottom: 10px; /* Espacio antes de la lista de productos */
+}
+
+.carrito div {
+    max-height: 400px; /* Altura máxima antes de desplazarse */
+    overflow-y: auto; /* Permite desplazarse si hay muchos productos */
+}
+
+.carrito p, .carrito div {
+    color: #555; /* Color de texto */
+    font-size: 0.9rem;
+}
+
+.carrito button {
+    display: block; /* Hacer que el botón ocupe su propia línea */
+    width: 100%; /* Ancho completo */
+    padding: 10px 15px;
+    margin-top: 10px; /* Espacio arriba del botón */
+    background-color: #161616; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Bordes redondeados del botón */
+    cursor: pointer;
+    transition: background-color 0.2s; /* Transición de color */
+}
+
+.carrito button:hover {
+    background-color: #333; /* Color del botón al pasar el ratón por encima */
+}
 
 
 
