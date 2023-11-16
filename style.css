@@ -558,24 +558,28 @@ background: var(--hover-color);
 
 .carrito {
     display: none;
-    position: fixed; /* Cambiado de absolute a fixed */
+    position: fixed;
     right: 20px;
-    top: 60px; /* Ajusta esto según la altura de tu barra de navegación */
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 60px;
     z-index: 1000;
-    border-radius: 8px;
     width: 300px;
-    padding: 15px;
-    overflow: hidden;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
     transition: all 0.3s ease;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 10px;
 }
 
 .carrito h2 {
-    margin-top: 0;
-    color: #333; /* Color de texto más oscuro para mejor legibilidad */
-    font-size: 1.4rem;
-    margin-bottom: 10px; /* Espacio antes de la lista de productos */
+    color: #161616;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
 }
 
 .carrito div {
@@ -599,14 +603,55 @@ background: var(--hover-color);
     border-radius: 4px; /* Bordes redondeados del botón */
     cursor: pointer;
     transition: background-color 0.2s; /* Transición de color */
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    
+}
+
+.carrito .producto {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+
+
+.carrito .producto-info {
+    font-size: 0.9rem;
+}
+
+.carrito .precio {
+    font-weight: bold;
 }
 
 .carrito button:hover {
-    background-color: #333; /* Color del botón al pasar el ratón por encima */
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    background-color: #f12020;;
 }
 
 .btn {
     transition: background-color 0.3s, transform 0.3s;
+}
+
+.carrito::-webkit-scrollbar {
+    width: 6px;
+}
+
+.carrito::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.carrito::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.carrito::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .btn:hover {
@@ -633,6 +678,14 @@ background: var(--hover-color);
     background-color: var(--secondary-color);
     border-radius: 10px;
     margin: 1.5rem 0;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+#openAddProductForm:hover {
+    background-color: var(--title-color);
+    transform: translateY(-2px);
 }
 
 #addProductForm input, #addProductForm textarea {
@@ -642,6 +695,8 @@ background: var(--hover-color);
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+
 
 #addProductForm button {
     padding: 10px 20px;
@@ -684,13 +739,14 @@ background: var(--hover-color);
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000; /* Alta prioridad */
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6); /* Fondo más oscuro */
+    background-color: rgba(0,0,0,0.6);
+    animation: fadeIn 0.5s;
 }
 
 /* Estilo del contenido del modal */
@@ -699,8 +755,9 @@ background: var(--hover-color);
     margin: 4% auto; /* Ajuste para centrar verticalmente y dar espacio superior */
     padding: 20px;
     border-radius: 8px; /* Bordes redondeados */
-    width: 50%; /* Ajuste para reducir el ancho del modal */
+    width: 42%; /* Ajuste para reducir el ancho del modal */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para resaltar */
+    
 }
 
 /* El botón de cerrar (x) */
@@ -709,8 +766,7 @@ background: var(--hover-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
-    margin-top: -20px;
-    margin-right: -20px;
+    margin: -10px -10px 0 0;
 }
 
 .close:hover,
@@ -724,6 +780,7 @@ background: var(--hover-color);
 #addProductForm {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 #addProductForm input[type="text"],
@@ -749,7 +806,10 @@ background: var(--hover-color);
     background-color: var(--title-color);
 }
 
-
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 
 
