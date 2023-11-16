@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="icon" href="./img/log.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
   <title>Trabajo desarrollo web</title>
 </head>
 
@@ -18,21 +20,21 @@
     <header>
       <header>
         <div class="nav container">
-            <a href="#" class="logo">
-                <img src="./img/logo.png" alt="logoHeadsets" />
-                <span class="logo-text">Studio</span>
-            </a>
-            <i class="bx bx-menu" id="menu-icon"></i>
-            <ul class="navbar">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Nosotros</a></li>
-                <li><a href="#shop">Tienda</a></li>
-                <li><a href="#buds">Buds</a></li>
-                <li><a href="#" id="cart-icon"><i class="bx bx-shopping-bag"></i></a></li>
-            </ul>
+          <a href="#" class="logo">
+            <img src="./img/logo.png" alt="logoHeadsets" />
+            <span class="logo-text">Studio</span>
+          </a>
+          <i class="bx bx-menu" id="menu-icon"></i>
+          <ul class="navbar">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#shop">Tienda</a></li>
+            <li><a href="#buds">Buds</a></li>
+            <li><a href="#" id="cart-icon"><i class="bx bx-shopping-bag"></i></a></li>
+          </ul>
         </div>
-    </header>
-    
+      </header>
+
     </header>
 
     <div id="carrito" class="carrito">
@@ -40,35 +42,35 @@
       <div id="itemsCarrito"></div>
       <p>Total: $<span id="totalCarrito">0</span></p>
       <button id="vaciarCarrito">Vaciar Carrito</button>
-  </div>
-  
+    </div>
 
-    <section class="home" id="home">
+
+    <section class="home" id="home" data-aos="fade" data-aos-duration="900">
       <div class="home-content container">
-        <div class="home-img">
+        <div class="home-img" data-aos="fade-up" data-aos-duration="900">
           <img src="img/home.png" alt="audifonos bacanos" />
         </div>
 
         <div class="home-text">
-          <h1>Beats Solo 3</h1>
-          <p>
+          <h1 data-aos="fade-up" data-aos-duration="900">Beats Solo 3</h1>
+          <p data-aos="fade-up" data-aos-duration="900">
             Beast solo3 wireless over-hear headphones delivers premium sound
             with blocking external noise with active noise cancelling
           </p>
-          <a href="#" class="btn">
+          <a href="#" class="btn" data-aos="fade-up" data-aos-duration="900">
             <i class="bx bx-shopping-bag"></i>
             Comprar ahora</a>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade" data-aos-duration="900">
       <div class="about_content container">
         <div class="about-text">
-          <h1>Sobre nosotros</h1>
+          <h1 data-aos="fade-up" data-aos-duration="900">Sobre nosotros</h1>
 
           <div class="container-paragraph">
-            <p>
+            <p data-aos="fade-up" data-aos-duration="900">
               En Studio3, amamos la música tanto como tú. Nos apasiona
               ofrecerte la mejor calidad de sonido y la libertad de la
               tecnología inalámbrica. Nuestros audífonos Studio3 son el
@@ -78,7 +80,7 @@
             </p>
           </div>
         </div>
-        <div class="about-img">
+        <div class="about-img" data-aos="fade-up" data-aos-duration="900">
           <img src="img/about.png" alt="audifonos bacanos" />
         </div>
       </div>
@@ -86,10 +88,10 @@
 
 
 
-    <section class="specs" id="specs">
+    <section class="specs" id="specs" data-aos="fade-up" data-aos-duration="900">
       <div class="specs-container container">
         <div class="specs-details">
-          <h2> Especificaciones</h2>
+          <h2 data-aos="fade-up" data-aos-duration="900">Especificaciones</h2>
           <div class="box">
             <i class='bx bx-headphone'></i>
             <h3> Bloqueo de ruido exterior</h3><br>
@@ -115,8 +117,8 @@
 
 
 
-    <section class="shop" id="shop">
-      <h2 class="heading">Compra ahora</h2>
+    <section class="shop" id="shop" data-aos="fade-up" data-aos-duration="900">
+      <h2 class="heading" data-aos="fade-up" data-aos-duration="900">Compra ahora</h2>
       <div class="shop-container container">
         <div class="box">
           <img src="img/shop1.png" alt="audifono">
@@ -162,23 +164,22 @@
       </div>
     </section>
 
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials" id="testimonials" data-aos="fade-up" data-aos-duration="900">
       <div class="testimonials-header">
-        <h2 class="heading">Que dicen nuestros clientes
-          sobre nosotros</h2>
+        <h2 class="heading" data-aos="fade-up" data-aos-duration="900">Que dicen nuestros clientes sobre
+          nosotros</h2>
       </div>
-      <div class="testimonials-container container">
-      <div class="testimonials-box">
-        <div class="info">
-          <img src="img/iconU.webp" alt="programador">
-          <div class="text-box">
-            <h3 class="name">Luis David</h3>
-            <span class="job">programador</span>
+      <div class="testimonials-container container" id="testimonials-container">
+        <div class="testimonials-box">
+          <!-- Testimonio 1 -->
+          <div class="info">
+            <img src="img/iconU.webp" alt="programador">
+            <div class="text-box">
+              <h3 class="name">Luis David</h3>
+              <span class="job">Programador</span>
+            </div>
           </div>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure, impedit ipsum eum perferendis tempora
-          nisi minus accusantium molestias est! Illo eos necessitatibus alias asperiores rem et quibusdam distinctio
-          beatae.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
           <div class="rating">
             <i class='bx bxs-star'></i>
             <i class='bx bxs-star'></i>
@@ -186,33 +187,34 @@
             <i class='bx bxs-star'></i>
             <i class='bx bxs-star'></i>
           </div>
-      </div>
+        </div>
 
-      <div class="testimonials-box">
-        <div class="info">
-          <img src="img/iconU.webp" alt="programador">
-          <div class="text-box">
-            <h3 class="name">Luis David</h3>
-            <span class="job">programador</span>
+        <div class="testimonials-box">
+          <!-- Testimonio 2 -->
+          <div class="info">
+            <img src="img/iconU.webp" alt="programador">
+            <div class="text-box">
+              <h3 class="name">Juan Pérez</h3>
+              <span class="job">Diseñador</span>
+            </div>
           </div>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure, impedit ipsum eum perferendis tempora
-          nisi minus accusantium molestias est! Illo eos necessitatibus alias asperiores rem et quibusdam distinctio
-          beatae.</p>
+          <p>Consectetur adipisicing elit. Aperiam iure, impedit ipsum eum...</p>
           <div class="rating">
             <i class='bx bxs-star'></i>
             <i class='bx bxs-star'></i>
             <i class='bx bxs-star'></i>
             <i class='bx bxs-star'></i>
-            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half'></i>
           </div>
         </div>
+
+
       </div>
     </section>
 
 
 
-    <section class="buds" id="buds">
+    <section class="buds" id="buds" data-aos="fade-up" data-aos-duration="900">
       <div class="buds-container container">
         <div class="video-container">
           <video id="video" autoplay loop muted>
@@ -229,18 +231,18 @@
             </div>
             <a href="#" class="btn">
               <i class="bx bx-shopping-bag"></i>
-              Comprar ahora</a> 
+              Comprar ahora</a>
           </div>
           <div class="buds-img">
             <img src="img/buds.png" alt="audifonos inalambricos">
           </div>
         </div>
       </div>
-      
+
     </section>
 
 
-    <section class="footer container">
+    <section class="footer container" data-aos="fade-up" data-aos-duration="900">
       <a href="#" class="logo"> <img src="img/logo.png" alt=""></a>
       <div class="footer-box">
         <h2>Productos</h2>
@@ -270,73 +272,81 @@
     </div>
   </div>
 
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    AOS.init();
+  </script>
 
+
+
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
-    const carrito = [];
-    const agregarAlCarritoButtons = document.querySelectorAll('.btn-carrito');
-    const itemsCarrito = document.getElementById('itemsCarrito');
-    const totalCarrito = document.getElementById('totalCarrito');
-    const vaciarCarritoButton = document.getElementById('vaciarCarrito');
+      const carrito = [];
+      const agregarAlCarritoButtons = document.querySelectorAll('.btn-carrito');
+      const itemsCarrito = document.getElementById('itemsCarrito');
+      const totalCarrito = document.getElementById('totalCarrito');
+      const vaciarCarritoButton = document.getElementById('vaciarCarrito');
 
-    
-    agregarAlCarritoButtons.forEach(button => {
+
+      agregarAlCarritoButtons.forEach(button => {
         button.addEventListener('click', () => {
             const productoId = button.getAttribute('data-id');
             const producto = encontrarProductoPorId(productoId);
             if (producto) {
-                carrito.push(producto); 
+                carrito.push(producto);
                 actualizarCarrito();
             }
         });
-    });
+      });
 
-    
-    
-        function encontrarProductoPorId(id) {
-    switch(id) {
-        case '1':
+
+
+      function encontrarProductoPorId(id) {
+        switch (id) {
+          case '1':
             return { id: id, nombre: 'Beat Solo3 Morados', precio: 250 };
-        case '2':
+          case '2':
             return { id: id, nombre: 'Beat Solo3 Rosados', precio: 350 };
-        case '3':
+          case '3':
             return { id: id, nombre: 'Beat Solo3 Gris', precio: 250 };
-        case '4':
+          case '4':
             return { id: id, nombre: 'Beat Solo3 Rojos', precio: 250 };
-        case '5':
+          case '5':
             return { id: id, nombre: 'Beat Solo3 Azul cielo', precio: 250 };
-        case '6':
-        return { id: id, nombre: 'Beat Solo3 Azul oscuro', precio: 250 }; 
-        default:
-        return null;
-    }
-}
+          case '6':
+            return { id: id, nombre: 'Beat Solo3 Azul oscuro', precio: 250 };
+          default:
+            return null;
+        }
+      }
 
-const cartIcon = document.getElementById('cart-icon');
-    const cart = document.getElementById('carrito');
-    
-    cartIcon.addEventListener('click', () => {
+      const cartIcon = document.getElementById('cart-icon');
+      const cart = document.getElementById('carrito');
+
+      cartIcon.addEventListener('click', () => {
         cart.style.display = cart.style.display === 'block' ? 'none' : 'block';
-    });
+      });
 
-function actualizarCarrito() {
+      function actualizarCarrito() {
         itemsCarrito.innerHTML = '';
         carrito.forEach(producto => {
-            const div = document.createElement('div');
-            div.innerHTML = `${producto.nombre} - $${producto.precio}`;
-            itemsCarrito.appendChild(div);
+          const div = document.createElement('div');
+          div.innerHTML = `${producto.nombre} - $${producto.precio}`;
+          itemsCarrito.appendChild(div);
         });
         const total = carrito.reduce((acc, producto) => acc + producto.precio, 0);
         totalCarrito.innerText = total;
-    }
+      }
 
-    vaciarCarritoButton.addEventListener('click', () => {
+      vaciarCarritoButton.addEventListener('click', () => {
         carrito.length = 0;
         actualizarCarrito();
+      });
     });
-});
-    </script>
-    
+  </script>
+
 </body>
 
 </html>
