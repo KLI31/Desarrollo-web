@@ -285,7 +285,7 @@
             const productoId = button.getAttribute('data-id');
             const producto = encontrarProductoPorId(productoId);
             if (producto) {
-                carrito.push(producto);
+                carrito.push(producto); 
                 actualizarCarrito();
             }
         });
