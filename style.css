@@ -813,6 +813,85 @@ background: var(--hover-color);
 
 
 
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .home-content,
+    .about_content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home-img,
+    .about-img {
+        width: 100%;
+        margin: auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .specs-img, .testimonials-box, .buds-img img {
+        width: 100%;
+    }
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 480px) {
+    .navbar {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .home-text h1,
+    .about-text h1,
+    .specs-details h2 {
+        font-size: 2rem;
+    }
+
+    .shop-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-header, .testimonials-container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .buds-container2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ajustes adicionales para mejorar la responsividad */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adaptar los tamaños de las fuentes para pantallas más pequeñas */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar a, .footer-box a, .testimonials-box .job {
+        font-size: 12px;
+    }
+}
+
+
 
 
 
