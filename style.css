@@ -61,6 +61,8 @@ header {
 .logo{
     display: flex;
     align-items: center;
+    text-decoration: none;
+
 }
 
 .logo img{
@@ -79,6 +81,7 @@ header {
     font-size: 24px;
     cursor: pointer;
     display: none;
+    
 }
 
 .navbar{
@@ -90,6 +93,7 @@ header {
     font-size: 1rem;
     font-weight: 500;
     color: #6b6b6b;
+    text-decoration: none;
 }
 
 .navbar a:hover{
@@ -349,82 +353,90 @@ font-size: 1rem;
     border-radius: 8px;
     color: var(--bg-color);
     align-self: center;
-    cursor: pointer; /* Cambia el cursor para indicar que es un botón */
+    cursor: pointer;
 }
 
 
 .shop-container .box .bx:hover {
     background-color: var(--hover-color);
-    transform: translateY(-2px); /* Elevación suave */
+    transform: translateY(-2px); 
     color: var(--bg-color);
 }
 
 
-.testimonials-header{
-    max-width: 50%;
-    margin: auto;
-    margin-bottom: 5rem;
-}
 
 
-.testimonials-container{
-    display: grid;
-    flex-direction: row;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-
-
-.testimonials-box{
+#testimonials {
+    background-color: #fff; 
+    color: #000; 
+    font-family: Arial, sans-serif; 
+  }
+  
+  #testimonials .heading {
+    color: #000; 
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  #carouselExample {
+    background-color: #fff; 
+  }
+  
+  
+  .carousel-item {
+    text-align: center; 
     padding: 20px;
-    width: 450px;
+    
+  }
+
+  .col-md-4 {
+    box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.25);
     background-color: var(--bg-color);
-    box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.25);;
     border-radius: 30px;
-}
+    margin: 20px; 
+    flex: 0 0 calc(33.333% - 20px);
+    padding: 15px; 
+  }
+  
+ 
+  .carousel-item img {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    object-fit: cover;
+  }
+  
+ 
+  .text-box {
+    margin-top: 10px; 
+  }
+  
+  .text-box .name {
+    font-weight: bold; 
+  }
+  
+  .text-box .job {
+    font-style: italic;
+  }
+  
+  .rating i {
+    color: #000; 
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #bbbbbb; 
+    border-radius: 50%; 
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: #444;
+  }
+  
 
 
-.testimonials-box .info{
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-}
 
-.testimonials-box img{
-    max-width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 20px;
-    vertical-align: middle;
-}
-
-.testimonials-box .name{
-    font-size: 18px;
-    text-transform: capitalize;
-    font-weight: 600px;
-    line-height: 1.2;
-}
-
-.testimonials-box .job{
-    font-size: 14px;
-    color: #777;
-    text-transform: capitalize;
-    font-weight: 500;
-}
-
-.testimonials-box p{
-    margin-top: 20px;
-    color: hsl(0, 0%, 40%);
-}
-
-.rating{
-    margin-top: 10px;
-    font-size: 14px;
-    color: hsl(33, 86%, 66%);
-}
 
 
 .buds-container {
@@ -505,6 +517,7 @@ font-size: 1rem;
 .footer-box{
     display: flex;
     flex-direction: column;
+    
 }
 
 .footer-box h2{
@@ -517,6 +530,7 @@ margin-bottom: 1rem;
 color: #6b6b6b;
 margin-bottom: 4px; 
 font-size: 0.9rem;
+text-decoration: none;
 }
 
 
@@ -583,26 +597,26 @@ background: var(--hover-color);
 }
 
 .carrito div {
-    max-height: 400px; /* Altura máxima antes de desplazarse */
-    overflow-y: auto; /* Permite desplazarse si hay muchos productos */
+    max-height: 400px; 
+    overflow-y: auto;
 }
 
 .carrito p, .carrito div {
-    color: #555; /* Color de texto */
+    color: #555; 
     font-size: 0.9rem;
 }
 
 .carrito button {
-    display: block; /* Hacer que el botón ocupe su propia línea */
-    width: 100%; /* Ancho completo */
+    display: block;
+    width: 100%; 
     padding: 10px 15px;
-    margin-top: 10px; /* Espacio arriba del botón */
-    background-color: #161616; /* Color del botón */
+    margin-top: 10px;
+    background-color: #161616;
     color: white;
     border: none;
-    border-radius: 4px; /* Bordes redondeados del botón */
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s; /* Transición de color */
+    transition: background-color 0.2s;
     transition: all 0.3s ease;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
     
@@ -656,7 +670,7 @@ background: var(--hover-color);
 
 .btn:hover {
     background-color: var(--hover-color);
-    transform: translateY(-2px); /* Elevación sutil al pasar el ratón */
+    transform: translateY(-2px);
 }
 
 .navbar a {
@@ -667,7 +681,7 @@ background: var(--hover-color);
     color: var(--hover-color);
 }
 
-/* Animación suave para aparición de elementos */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -711,7 +725,7 @@ background: var(--hover-color);
     background-color: var(--title-color);
 }
 
-/* Estilos para el botón de añadir producto en la barra de navegación */
+
 #openAddProductForm {
     background-color: var(--hover-color);
     color: white;
@@ -749,18 +763,18 @@ background: var(--hover-color);
     animation: fadeIn 0.5s;
 }
 
-/* Estilo del contenido del modal */
+
 .modal-content {
     background-color: #fefefe;
-    margin: 4% auto; /* Ajuste para centrar verticalmente y dar espacio superior */
+    margin: 4% auto; 
     padding: 20px;
-    border-radius: 8px; /* Bordes redondeados */
-    width: 42%; /* Ajuste para reducir el ancho del modal */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para resaltar */
+    border-radius: 8px; 
+    width: 42%; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     
 }
 
-/* El botón de cerrar (x) */
+
 .close {
     color: #aaa;
     float: right;
@@ -776,7 +790,7 @@ background: var(--hover-color);
     cursor: pointer;
 }
 
-/* Estilos para el formulario dentro del modal */
+
 #addProductForm {
     display: flex;
     flex-direction: column;
@@ -806,6 +820,17 @@ background: var(--hover-color);
     background-color: var(--title-color);
 }
 
+.carousel-item .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carousel-item .col-md-4 {
+    flex: 0 0 auto; 
+    width: 33.333333%; 
+  }
+
+  
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -813,7 +838,7 @@ background: var(--hover-color);
 
 
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -840,7 +865,7 @@ background: var(--hover-color);
     }
 }
 
-/* Media queries para dispositivos móviles */
+
 @media (max-width: 480px) {
     .navbar {
         display: none;
@@ -874,13 +899,12 @@ background: var(--hover-color);
     }
 }
 
-/* Ajustes adicionales para mejorar la responsividad */
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Adaptar los tamaños de las fuentes para pantallas más pequeñas */
 @media (max-width: 480px) {
     body {
         font-size: 14px;

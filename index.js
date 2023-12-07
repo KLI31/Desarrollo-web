@@ -16,11 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (producto) {
         carrito.push(producto);
         actualizarCarrito();
+        mostrarToast(); 
       }
     });
   });
-
-
 
   function encontrarProductoPorId(id) {
     switch (id) {
@@ -118,28 +117,35 @@ document.getElementById('openAddProductForm').addEventListener('click', function
   }
 });
 
-// Obtener el modal
+
+
 var modal = document.getElementById('addProductFormContainer');
 
-// Obtener el botón que abre el modal
+
 var btn = document.getElementById("openAddProductForm");
 
-// Obtener el elemento que cierra el modal
+
 var span = document.getElementsByClassName("close")[0];
 
-// Cuando se haga clic en el botón, abrir el modal 
+
 btn.onclick = function () {
   modal.style.display = "block";
 }
 
-// Cuando se haga clic en (x), cierra el modal
+
 span.onclick = function () {
   modal.style.display = "none";
 }
 
-// Si se hace clic fuera del modal, ciérralo
+
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+function mostrarToast() {
+  const toastEl = document.getElementById('liveToast');
+  const toast = new bootstrap.Toast(toastEl); 
+  toast.show(); 
 }
