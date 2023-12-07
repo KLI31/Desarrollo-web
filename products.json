@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "nombre": "Beat Solo3 Morados",
+    "precio": 250,
+    "imagen": "img/shop1.png"
+  },
+  {
+    "id": "2",
+    "nombre": "Beat Solo3 Rosados",
+    "precio": 350,
+    "imagen": "img/shop2.png"
+  },
+  {
+    "id": "3",
+    "nombre": "Beat Solo3 Gris",
+    "precio": 250,
+    "imagen": "img/shop3.png"
+  },
+  {
+    "id": "4",
+    "nombre": "Beat Solo3 Rojo",
+    "precio": 250,
+    "imagen": "img/shop4.png"
+  },
+  {
+    "id": "5",
+    "nombre": "Beat Solo3 Azul cielo",
+    "precio": 250,
+    "imagen": "img/shop5.png"
+  },
+  {
+    "id": "6",
+    "nombre": "Beat Solo3 Azul oscuro",
+    "precio": 250,
+    "imagen": "img/shop6.png"
+  }
+]

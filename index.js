@@ -1,8 +1,7 @@
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const carrito = [];
+  const productos = [];
+  cargarProductos()
   const agregarAlCarritoButtons = document.querySelectorAll('.btn-carrito');
   const itemsCarrito = document.getElementById('itemsCarrito');
   const totalCarrito = document.getElementById('totalCarrito');
@@ -16,10 +15,64 @@ document.addEventListener('DOMContentLoaded', () => {
       if (producto) {
         carrito.push(producto);
         actualizarCarrito();
-        mostrarToast(); 
+        mostrarToast();
       }
     });
   });
+
+  function cargarProductos() {
+    fetch('products.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error al cargar productos');
+        }
+        return response.json();
+      })
+      .then(data => {
+        productos = data;
+        console.log('Productos cargados:', productos);
+        mostrarProductos();
+      })
+      .catch(error => {
+        console.error('Error al cargar productos:', error);
+      });
+  }
+
+  function mostrarProductos() {
+    const container = document.querySelector('.shop-container');
+    container.innerHTML = '';
+    productos.forEach(producto => {
+      container.appendChild(crearElementoProducto(producto));
+    });
+  }
+
+  function crearElementoProducto(producto) {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'box';
+
+    const img = document.createElement('img');
+    img.src = producto.imagen;
+    img.alt = producto.nombre;
+    productDiv.appendChild(img);
+
+    const nameElement = document.createElement('h3');
+    nameElement.textContent = producto.nombre; // Fix this line
+    productDiv.appendChild(nameElement);
+
+    const priceElement = document.createElement('span');
+    priceElement.textContent = `$${producto.precio}`;
+    productDiv.appendChild(priceElement);
+
+    const cartButton = document.createElement('i');
+    cartButton.className = 'bx bx-shopping-bag btn-carrito';
+    cartButton.setAttribute('data-id', producto.id);
+    cartButton.addEventListener('click', () => agregarAlCarrito(producto.id));
+    productDiv.appendChild(cartButton);
+
+    return productDiv;
+  }
+
+
 
   function encontrarProductoPorId(id) {
     switch (id) {
@@ -72,10 +125,8 @@ document.getElementById('addProductForm').addEventListener('submit', function (e
   var productPrice = document.getElementById('productPrice').value;
   var productImage = document.getElementById('productImage').files[0];
 
-  // Llamar a la función para añadir el producto
   addProduct(productName, productPrice, productImage);
 
-  // Opcional: Limpiar el formulario después de añadir el producto
   this.reset();
 });
 
@@ -98,7 +149,6 @@ function addProduct(name, price, imageFile) {
   productDiv.appendChild(priceElement);
 
   var cartButton = document.createElement('i');
-  // cartButton.textContent = 'Añadir al carrito';
   cartButton.className = 'bx bx-shopping-bag btn-carrito';
   cartButton.setAttribute('data-id', 'new');
   productDiv.appendChild(cartButton);
@@ -146,6 +196,6 @@ window.onclick = function (event) {
 
 function mostrarToast() {
   const toastEl = document.getElementById('liveToast');
-  const toast = new bootstrap.Toast(toastEl); 
-  toast.show(); 
+  const toast = new bootstrap.Toast(toastEl);
+  toast.show();
 }

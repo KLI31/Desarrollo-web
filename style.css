@@ -35,7 +35,7 @@ section{
     padding: 4rem 0 3rem;
 }
 
-.container{
+.containerSection{
     margin: auto;
     max-width: 60.5rem;
     width: 100%;
@@ -105,6 +105,7 @@ header {
     font-size: 3.4rem;
     margin-bottom: 2rem;
     color: var(--title-color);
+    font-weight: bold;
 }
 
 .home-content{
@@ -131,6 +132,7 @@ header {
 .about-text h1{
     margin-bottom: 2rem;
     font-size: 3.4rem;
+    font-weight: bold;
     color: var(--title-color);
 }
 
@@ -155,13 +157,14 @@ header {
     margin-bottom: 1rem;
     font-size: 3.4rem;
     color: var(--title-color);
+    font-weight: bold;
 }
 
 .home-text p {
     margin-bottom: 1rem;
 }
 
-.btn{
+.btn-principal{
     display: inline-flex;
     color: var(--bg-color);
     column-gap: 0.5rem;
@@ -169,13 +172,14 @@ header {
     padding: 16px 24px;
     background-color: var(--text-color);
     border-radius: 0.4rem;
+    text-decoration: none;
 }
 
 .btn .bx{
     font-size: 1.4rem;
 }
 
-.btn:hover{
+.btn-principal:hover{
     background-color: var(--hover-color);
 }
 
@@ -276,6 +280,7 @@ header {
     margin-bottom: 1rem;
     font-size: 3.4rem;
     color: var(--title-color);
+    font-weight: bold;
 }
 
 .specs-details{
@@ -418,10 +423,9 @@ font-size: 1rem;
   .text-box .job {
     font-style: italic;
   }
-  
   .rating i {
     color: #000; 
-  }
+}
   
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
@@ -502,8 +506,9 @@ font-size: 1rem;
 }
 
 
-.buds-text .btn:hover{
+.buds-text .btn-principal:hover{
     background-color: #f12020;
+    transition: .3s ease-in-out;
 }
 
 
@@ -877,6 +882,7 @@ background: var(--hover-color);
 
     .heading {
         font-size: 2rem;
+        font-weight: bold;
     }
 
     .home-text h1,
