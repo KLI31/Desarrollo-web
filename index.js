@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const carrito = [];
-  const productos = [];
+  let productos = [];
   cargarProductos()
   const agregarAlCarritoButtons = document.querySelectorAll('.btn-carrito');
   const itemsCarrito = document.getElementById('itemsCarrito');
@@ -8,34 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const vaciarCarritoButton = document.getElementById('vaciarCarrito');
 
 
-  agregarAlCarritoButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const productoId = button.getAttribute('data-id');
-      const producto = encontrarProductoPorId(productoId);
+  document.querySelector('.shop-container').addEventListener('click', e => {
+    if (e.target.classList.contains('btn-carrito')) {
+      const id = e.target.getAttribute('data-id');
+      const producto = encontrarProductoPorId(id);
       if (producto) {
         carrito.push(producto);
         actualizarCarrito();
-        mostrarToast();
       }
-    });
+    }
   });
-
   function cargarProductos() {
     fetch('products.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Error al cargar productos');
-        }
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
         productos = data;
-        console.log('Productos cargados:', productos);
         mostrarProductos();
       })
-      .catch(error => {
-        console.error('Error al cargar productos:', error);
-      });
+      .catch(error => console.error('Error al cargar productos:', error));
   }
 
   function mostrarProductos() {
@@ -72,7 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     return productDiv;
   }
 
-
+  const findProductById = (id) => {
+    return productos.find(producto => producto.id === id)
+  }
 
   function encontrarProductoPorId(id) {
     switch (id) {
